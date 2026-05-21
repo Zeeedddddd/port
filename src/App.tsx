@@ -4,9 +4,6 @@
  */
 
 import { useState, useEffect, ReactNode } from 'react';
-import davidImage from './assets/david.png';
-import ecommerceImage from './assets/ecommerce.jpg';
-import fintechImage from './assets/fintech.jpg';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   Mail, 
@@ -52,7 +49,7 @@ const PROJECTS: Project[] = [
     title: "E-commerce Platform",
     description: "A premium online shopping experience featuring seamless navigation and modern retail aesthetics.",
     tags: ["React", "E-commerce", "Tailwind"],
-    image: ecommerceImage, 
+    image: "/input_file_0.png",
     link: "https://urban-style-react.netlify.app/"
   },
   {
@@ -60,7 +57,7 @@ const PROJECTS: Project[] = [
     title: "Fintech Payment Suite",
     description: "Secure and intuitive financial transaction platform designed for modern digital banking.",
     tags: ["Fintech", "Payments", "Dashboard"],
-    image: fintechImage,
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
     link: "https://hyperswitch.io/"
   },
   {
@@ -224,6 +221,15 @@ const MobileMenu = ({ isOpen, setIsOpen }: { isOpen: boolean, setIsOpen: (v: boo
             transition={{ type: 'spring', damping: 30, stiffness: 300 }}
             className="fixed top-0 right-0 bottom-0 w-4/5 max-w-[340px] bg-zinc-950 z-[80] shadow-2xl md:hidden border-l border-white/5 flex flex-col"
           >
+            {/* Close Button Inside the Sidebar */}
+            <button 
+              onClick={() => setIsOpen(false)}
+              className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:text-indigo-400 active:scale-95 transition-all duration-300 group"
+              aria-label="Close Menu"
+            >
+              <X className="w-6 h-6 transition-transform duration-300 group-hover:rotate-90" />
+            </button>
+
             <div className="flex flex-col h-full p-8 pt-32 overflow-y-auto">
               <div className="flex flex-col gap-2">
                 {navLinks.map((link, i) => (
@@ -363,7 +369,7 @@ export default function App() {
               className="relative w-full max-w-[92%] md:max-w-4xl aspect-[1/1] mx-auto mb-20 rounded-[4.5rem] md:rounded-[7.5rem] overflow-hidden border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)] bg-zinc-900/50"
             >
               <img 
-                src={davidImage} 
+                src="/input_file_2.png" 
                 alt="David - Full Stack Developer"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
