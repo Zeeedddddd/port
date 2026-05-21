@@ -5,6 +5,9 @@
 
 import { useState, useEffect, ReactNode } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import davidImage from './assets/david.png';
+import ecommerceImage from './assets/ecommerce.jpg';
+import fintechImage from './assets/fintech.jpg';
 import { 
   Mail, 
   MessageCircle, 
@@ -49,7 +52,7 @@ const PROJECTS: Project[] = [
     title: "E-commerce Platform",
     description: "A premium online shopping experience featuring seamless navigation and modern retail aesthetics.",
     tags: ["React", "E-commerce", "Tailwind"],
-    image: "/input_file_0.png",
+    image: ecommerceImage,
     link: "https://urban-style-react.netlify.app/"
   },
   {
@@ -57,7 +60,7 @@ const PROJECTS: Project[] = [
     title: "Fintech Payment Suite",
     description: "Secure and intuitive financial transaction platform designed for modern digital banking.",
     tags: ["Fintech", "Payments", "Dashboard"],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?q=80&w=2070&auto=format&fit=crop",
+    image: fintechImage,
     link: "https://hyperswitch.io/"
   },
   {
@@ -369,7 +372,7 @@ export default function App() {
               className="relative w-full max-w-[92%] md:max-w-4xl aspect-[1/1] mx-auto mb-20 rounded-[4.5rem] md:rounded-[7.5rem] overflow-hidden border border-white/10 shadow-[0_40px_100px_rgba(0,0,0,0.6)] bg-zinc-900/50"
             >
               <img 
-                src="/input_file_2.png" 
+                src= {davidImage}
                 alt="David - Full Stack Developer"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
